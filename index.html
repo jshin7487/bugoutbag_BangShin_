@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>생존 배낭</title>
+    <link rel="icon" type="image/png" href="icon_backpack.png">
+    <link rel="stylesheet" href="myStyle.css">
+    <script src="myScript.js" defer></script>
+</head>
+<body ondragstart="return false">
+
+    <div class="hero-container">
+        <div class="slide slide-1"></div>
+        
+        <div class="slide slide-2" id="coverImage">
+            <div class="title-group">
+                <img src="s_main/title.png" alt="타이틀1" class="title-img title-1">
+                <img src="s_main/title_0.png" alt="타이틀2" class="title-img title-2">
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="info-wrapper">
+            <div class="info-block">
+                <img src="s_description/title_1.png" alt="타이틀1" class="info-title info-title-1">
+                <p class="info-text">
+                    재난, 재해 또는 비상 상황 발생 시, 안전한 곳으로 대피하거나 구조를 기다리는<br>
+                    동안 자력으로 생존하는 데 필요한 필수 물품들을 미리 담아 준비해 둔 휴대용 가방
+                </p>
+            </div>
+
+            <div class="info-block">
+                <img src="s_description/title_2.png" alt="타이틀2" class="info-title info-title-2">
+                <p class="info-text">
+                    성인 남성 기준 일반적으로 본인 체중의 25% 이하<br>
+                    성인 여성은 개인 체력에 따라 12kg~최고 15kg<br>
+                    <span class="small-desc">
+                        *본인의 체력과 근력이 낮은 경우, 생존 배낭의 무게는 되도록 가벼워야 함
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="info-wrapper">
+            <div class="info-block">
+                <img src="s_ranking/title_3.png" alt="우선순위" class="info-title info-title-3">
+                
+                <div class="ranking-container">
+                    <img src="s_ranking/ranking_1.png" alt="1위" class="rank-img rank-1">
+                    <img src="s_ranking/ranking_2.png" alt="2위" class="rank-img rank-2">
+                    <img src="s_ranking/ranking_3.png" alt="3위" class="rank-img rank-3">
+                    <p class="rank-text">
+                    생존 배낭의 핵심은 <strong>'한정된 무게와 공간'</strong> 안에서 생존 확률을 극대화하는 것입니다.<br>
+                    모든 것을 챙길 수는 없기에, 우리는 철저한 기준으로 물품을 선별해야 합니다.<br>
+                    당장 없으면 <strong>생명을 잃을 수 있는 필수 요소</strong>부터 채우고, 이후 <strong>안전한 이동을 돕는 도구</strong>와<br>
+                    <strong>장기 생존을 위한 물품</strong>으로 확장해 나가는 방식으로 생존 배낭을 구성해야 합니다. <br>
+                    위와 같은 기준을 따르면 불필요한 짐을 줄이고 골든타임을 지켜낼 수 있습니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="info-wrapper">
+            <div class="info-block">
+                <img src="s_warning/title_4.png" alt="주의사항" class="info-title info-title-4">
+                
+                <div class="warning-container">
+                    <img src="s_warning/warning_1.png" alt="1번" class="warn-img warn-1">
+                    <img src="s_warning/warning_2.png" alt="2번" class="warn-img warn-2">
+                    <img src="s_warning/warning_3.png" alt="3번" class="warn-img warn-3">
+                    <p class="rank-text">
+                    생존 배낭은 무조건 남들과 똑같이 꾸리기보다는, 본인의 환경에 맞춰 유동적으로<br>
+                    구성하는 것이 효율적입니다. <strong>거주하는 지역이 도심인지 비도심인지</strong> 혹은 주로<br>
+                    <strong>대비하려는 재난이 어떤 것인지</strong> 따라 필요한 준비물이 달라질 수 있기 때문입니다.<br>
+                    또한 배낭은 한 번 꾸렸다고 끝이 아닙니다. 시간이 지나면 배터리가 방전되거나<br>
+                    식품이 상할 수 있기 때문에 <strong>정기적인 점검</strong>을 통해 소모품을 교체하고 장비 상태를 <br>
+                    확인해 줘야, 실제 위급 상황에서 당황하지 않고 문제없이 구성품을 사용할 수 있습니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="info-wrapper">
+            <div class="info-block">
+                <img src="s_pick/title_5.png" alt="재난 선택" class="info-title info-title-5">
+                
+                <div class="pick-container">
+                    <img src="s_pick/disaster.png" alt="재난" class="pick-img pick-1" data-target="modal-1">
+                    <img src="s_pick/earthquake.png" alt="지진" class="pick-img pick-2" data-target="modal-2">
+                    <img src="s_pick/fire.png" alt="화재" class="pick-img pick-3" data-target="modal-3">
+                    <img src="s_pick/water.png" alt="수해" class="pick-img pick-4" data-target="modal-4">
+                </div>
+                <p class="pick-desc">*준비하고 싶은 생존 가방의 재난 종류를 선택하세요</p>
+            </div>
+        </div>
+    </div> 
+    <footer>
+        <div class="footer-container">
+            <div class="footer-text">
+                <p>2025 HKNU Digital Publishing2</p>
+                <p>copyrightⓒ 생존배낭 | Jimin Bang | Jiwon Shin</p>
+            </div>
+        </div>
+    </footer>
+    <div id="modal-1" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+
+            <header class="main-title-area">
+                <img src="s_green/green_title.png" alt="재난대비 생존배낭" class="title-image">
+            </header>
+            
+            <section class="intro-text-area">
+                <p class="sub-text">
+                    지진, 화재 등 예상치 못한 비상 상황에 즉시 대처할 수 있도록<br>
+                    평소에 준비하는 가방
+                </p>
+
+                <h2 class="content-title">조건</h2>
+                <p class="sub-text">
+                    무게와 부피는 자신이 매고 움직였을 때 심한 무리가 가지 않을 정도로 구성<br>
+                    현실적으로 겪게 될 확률이 높은 재난부터 대비(자신의 지역에 따라 결정)<br>
+                    산소 > 체온 > 물 > 식량 > 그 외 순으로 중요함
+                </p>
+
+                <h2 class="content-title">알아야 할 지식</h2>
+                <p class="sub-text">
+                    사용법 : 소지하는 각 생존 물품의 사용법 및 완강기, 자동제세동기 사용법<br>
+                    비상탈출계획 : 대피요령, 옥상 출구, 완강기 위치, 비상계단 등 탈출 루트<br>
+                    비상연락망 : 다 외울 순 없으니 작게 프린트해서 소지 
+                </p>
+            </section>
+            
+            <div style="margin-top: 50px; font-size: 2rem; color: #fff; animation: bounce 2s infinite;"> 
+            </div>
+        </div>
+        
+        <div class="modal-content2">
+            
+            <header class="main-title-area2">
+                <img src="s_green/green_title2.png" alt="생존배낭 구성품" class="title-image">
+            </header>
+
+            <section class="items-grid-area">
+                <div class="grid-container">
+                    <div class="grid-item">
+                        <img src="s_green/green1.png" 
+                            data-hover="s_green/green1_o.png" 
+                            alt="물품1"
+                            data-popup-img="s_green/green1_n.png" 
+                            data-title="생수" 
+                            data-desc="물은 공기와 같이 인간 생존의 최우선 순위이다. 재난 시 탈수 상태를 피하고 생명을 유지하는 데 물이 가장 필수적인 요소이다.
+
+                    가장 중요한 활용은 탈수 방지를 위한 음용이다. 그 외에 상처를 씻어 감염을 막는 응급 처치 및 위생에 사용하여 재난 후 2차 감염을 예방하거나 화재상황에서 손수건을 적셔 건물을 탈출하는 데도 필수적으로 활용한다.">
+                    </div>
+                    <div class="grid-item">
+                        <img src="s_green/green2.png" 
+                            data-hover="s_green/green2_o.png" 
+                            alt="물품2"
+                            data-popup-img="s_green/green2_n.png" 
+                            data-title="방독면" 
+                            data-desc="방독면은 유독가스, 연기, 화학 물질 등이 포함된 공기를 흡입하기 전 필터를 통해 정화하여 호흡기를 보호하는 장비이다.
+
+                    지진 후 2차 화재, 일반 화재, 또는 화학 물질 누출 등의 재난 상황에서 발생하는 유독가스나 연기, 미세 분진은 질식이나 중독을 일으켜 생명을 위협한다. 방독면은 이러한 유해 물질로부터 호흡기를 즉시 보호하여, 안전하게 대피할 수 있는 시간을 확보하는 데 결정적인 역할을 한다.">
+                    </div>
+                    <div class="grid-item">
+                        <img src="s_green/green3.png" 
+                            data-hover="s_green/green3_o.png" 
+                            alt="물품3"
+                            data-popup-img="s_green/green3_n.png" 
+                            data-title="손전등" 
+                            data-desc="지진이나 화재, 수해 등으로 인해 도시 전체의 전력 공급이 중단될 때, 손전등은 빛을 확보할 수 있는 유일한 수단이 된다. 시야 확보가 불가능한 어둠 속에서 대피 경로를 찾거나, 잔해 속에서 매몰된 구조물을 확인하고, 부상자를 확인하는 등 모든 재난 활동의 기본이 되므로 필수적이다.
+
+                    가장 기본적으로 주변을 비춰 이동 경로를 확보하는 데 활용한다. 또한, 멀리서 빛을 깜빡이는 구조 신호를 보내거나(모스 부호 등), 어두운 곳에서 위치 표시를 하는 데 사용한다.">
+                    </div>
+                    <div class="grid-item">
+                        <img src="s_green/green4.png" 
+                            data-hover="s_green/green4_o.png" 
+                            alt="물품4"
+                            data-popup-img="s_green/green4_n.png" 
+                            data-title="멀티툴" 
+                            data-desc="멀티툴은 하나의 주머니칼 크기 도구 안에 칼날, 톱, 드라이버, 캔 따개, 플라이어 등 여러 가지 기능을 통합한 다용도 도구이다. 컴팩트한 크기로 휴대성이 높으며, 재난 상황에서 다양한 문제 해결을 위한 만능 도구로 활용된다.
+
+                    가장 기본적인 칼날은 식재료를 자르거나 응급 처치 시 옷을 자르는 데 활용하며, 캔 따개는 비상식량인 통조림을 개봉한다. 플라이어(집게)는 잔해 속의 와이어나 작은 장애물을 제거하거나 끊는 데 유용하며, 드라이버는 간단한 장비 수리나 잠긴 문을 여는 시도에 활용한다.">
+                    </div>
+                    <div class="grid-item">
+                        <img src="s_green/green5.png" 
+                            data-hover="s_green/green5_o.png" 
+                            alt="물품5"
+                            data-popup-img="s_green/green5_n.png" 
+                            data-title="소형라디오" 
+                            data-desc="지진이나 대규모 재난으로 인해 인터넷, 유선 전화, 휴대전화 기지국 등 모든 현대적 통신망이 마비될 때, 소형 라디오는 재난 정보를 수신하는 가장 확실한 통로가 된다. 정부나 재난방송 주관방송사의 공식적인 대피령, 구조 상황, 기상 상황 등의 필수 정보를 파악하는 데 결정적인 역할을 한다.
+
+                    가장 중요한 활용은 재난 상황과 대피 지침에 대한 정보를 실시간으로 청취하는 것이다. 또한, 비상 조명이나 휴대폰 충전용 보조 전원으로도 활용할 수 있다.">
+                    </div>
+                    <div class="grid-item">
+                        <img src="s_green/green6.png" 
+                            data-hover="s_green/green6_o.png" 
+                            alt="물품6"
+                            data-popup-img="s_green/green6_n.png" 
+                            data-title="소독약" 
+                            data-desc="소독약은 피부, 상처, 물체 표면 등에 존재하는 미생물이나 세균을 제거하거나 성장을 억제하여 감염을 예방하는 약품이다. 재난 상황에서는 오염된 환경으로 인한 상처 감염 위험이 높기 때문에, 즉각적인 처치가 가능한 포비돈 요오드액이나 소독용 알코올 솜 등의 형태로 준비한다.
+
+                    가장 기본적인 활용은 베이거나 긁힌 상처 부위를 소독하는 것이다. 또한, 마실 물이 부족할 때 정수용으로도 사용 가능하다.">
+                    </div>
+                    <div class="grid-item">
+                        <img src="s_green/green7.png" 
+                            data-hover="s_green/green7_o.png" 
+                            alt="물품7"
+                            data-popup-img="s_green/green7_n.png" 
+                            data-title="지혈대" 
+                            data-desc="지혈대는 팔이나 다리 등 사지에 심각한 외상이나 출혈이 발생했을 때, 출혈 부위보다 심장에 가까운 쪽을 강하게 압박하여 피의 흐름을 완전히 차단하는 의료 도구이다.
+
+                    지진이나 폭발 등으로 날카로운 잔해에 의해 동맥이 손상되는 등 생명을 위협하는 대량 출혈이 발생할 수 있으며, 이 경우 몇 분 안에 사망할 수 있다. 재난 시 구조대의 도착이 지연될 때, 지혈대는 출혈을 신속하고 확실하게 통제하여 환자의 생존 시간을 확보하는 가장 중요한 응급 처치 도구이다.">
+                    </div>
+                    <div class="grid-item">
+                        <img src="s_green/green8.png" 
+                            data-hover="s_green/green8_o.png" 
+                            alt="물품8"
+                            data-popup-img="s_green/green8_n.png" 
+                            data-title="상비약" 
+                            data-desc="상비약은 의사의 처방 없이도 구할 수 있는 일반 의약품으로, 재난 상황에서 흔히 발생하는 통증, 발열, 소화 불량, 알레르기 등 가벼운 증상을 스스로 치료하기 위해 준비하는 약품이다. 이는 생존 기간 동안 환자의 불편함을 해소하고, 증상 악화를 막아 의료 시스템 붕괴 상황에 대비한다.
+
+                    병원이나 약국 접근이 불가능해질 경우 상비약은 이러한 증상을 초기에 관리하여, 작은 질환이 심각한 상태로 발전하는 것을 막고 생존자의 활동 능력을 유지한다.">
+                    </div>
+                    <div class="grid-item">
+                        <img src="s_green/green9.png" 
+                            data-hover="s_green/green9_o.png" 
+                            alt="물품9"
+                            data-popup-img="s_green/green9_n.png" 
+                            data-title="비상담요" 
+                            data-desc="비상 담요는 얇고 가벼운 폴리에스터 필름에 알루미늄이나 은 성분을 코팅하여 만든 담요이다. 부피가 매우 작고 무게가 거의 나가지 않아 휴대가 용이하며, 인체에서 발생하는 열의 약 90%를 반사하여 체온을 급격히 떨어지는 것을 막는 보온 기능을 주 목적으로 한다.
+
+                    가장 주된 활용은 신체 전체를 감싸 체온을 유지하는 것이다. 또한, 햇빛을 반사하는 특성을 이용하여 구조대에 자신의 위치를 알리는 신호 도구로 사용한다. 비상 시 임시로 방풍막이나 방수포처럼 활용하거나, 젖은 물품을 깔고 앉는 습기 차단재로도 활용하는 등 다목적 활용이 가능하다.">
+                    </div>
+                    <div class="grid-item">
+                        <img src="s_green/green10.png" 
+                            data-hover="s_green/green10_o.png" 
+                            alt="물품10"
+                            data-popup-img="s_green/green10_n.png" 
+                            data-title="비상식량" 
+                            data-desc="에너지바는 곡물, 견과류, 말린 과일 등을 압축하여 만든 고열량의 휴대용 식품이다.
+
+                    재난 발생 직후 72시간 동안 신체 활동량은 증가하는 반면, 식량 확보는 불가능할 수 있어 급격한 체력 저하가 발생한다. 에너지바는 최소한의 무게와 부피로 필수적인 열량을 신속하게 공급하여 체력 고갈을 막고, 대피 또는 구조 활동을 위한 활동 에너지를 유지하는 데 핵심적인 역할을 한다. 또한, 치거나 심리적으로 불안할 때 당분을 공급하여 기분을 전환하는 데도 활용된다.">
+                    </div>
+
+                    <div class="overlay-wrapper">
+                        <div class="popup-card">
+                            <span class="popup-close-btn">&times;</span>
+                            <div class="popup-image-box">
+                                <img src="" alt="">
+                            </div>
+                            <div class="popup-text-box">
+                                <h3 class="popup-title"></h3>
+                                <p class="popup-desc"></p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <div id="modal-2" class="modal">
+        <div class="modal-content3">
+            <span class="close-btn">&times;</span>
+            <header class="main-title-area">
+                <img src="s_yellow/yellow_title.png" alt="지진대비 생존배낭" class="title-image">
+            </header>
+            
+            <section class="intro-text-area">
+                <p class="sub-text">
+                    건물 붕괴 및 낙하물 위험이 높은 지진 발생 시, 신체를 보호하고 잔해 속에서<br>
+                     고립되거나 대피하는 과정에서 생존하기 위한 물품들로 구성된 배낭
+                </p>
+
+                <h2 class="content-title2">조건</h2>
+                <p class="sub-text">
+                    신체 보호 최우선 : 머리, 손, 발 등을 보호하는 장비의 비중이 높아야 함<br>
+                    구조 요청 기능 : 매몰될 가능성에 대비하여 구조를 요청할 수 있는 도구가 중요<br>
+                    2차 피해 대비 : 지진 후 발생할 수 있는 화재, 정전, 분진에 대비
+                </p>
+
+                <h2 class="content-title2">알아야 할 지식</h2>
+                <p class="sub-text">
+                    대피 요령 : 지진 발생 즉시 책상 아래, 단단한 가구 옆 등 몸을 보호할 장소 숙지<br>
+                    가스/전기 차단 : 흔들림이 멈추면 가스 밸브와 전기 차단기를 내리는 방법 숙지<br>
+                    잔해물 제거 : 작은 도구를 사용하여 간단한 장애물을 치우고 탈출하는 방법 숙지
+                </p>
+            </section>
+            
+            <div style="margin-top: 50px; font-size: 2rem; color: #fff; animation: bounce 2s infinite;"> 
+                
+            </div>
+        </div>
+
+        <div class="modal-content2">
+            
+            <header class="main-title-area2">
+                <img src="s_yellow/yellow_title2.png" alt="생존배낭 구성품" class="title-image">
+            </header>
+
+            <section class="items-grid-area">
+                <div class="grid-container">
+                    <div class="grid-item">
+                        <img src="s_green/green1.png" 
+                            data-hover="s_green/green1_o.png" 
+                            alt="물품1"
+                            data-popup-img="s_green/green1_n.png" 
+                            data-title="생수" 
+                            data-desc="물은 공기와 같이 인간 생존의 최우선 순위이다. 재난 시 탈수 상태를 피하고 생명을 유지하는 데 물이 가장 필수적인 요소이다.
+
+                    가장 중요한 활용은 탈수 방지를 위한 음용이다. 그 외에 상처를 씻어 감염을 막는 응급 처치 및 위생에 사용하여 재난 후 2차 감염을 예방하거나 화재상황에서 손수건을 적셔 건물을 탈출하는 데도 필수적으로 활용한다.">
+                    </div>
+                    <div class="grid-item">
+                        <img src="s_yellow/yellow2.png" 
+                            data-hover="s_yellow/yellow2_o.png" 
+                            alt="물품2"
+                            data-popup-img="s_yellow/yellow2_n.png" 
+                            data-title="안전모" 
+                            data-desc="지진 발생 시 낙하물, 붕괴 잔해, 튀어나온 구조물 등으로 인해 머리 부상을 입을 위험이 가장 높으며, 머리 부상은 치명적인 결과로 이어질 수 있다. 안전모는 이러한 충격으로부터 생명을 보호하고, 안전하게 대피 및 구조 활동을 수행할 수 있도록 해주는 필수 방호 장비이다.
+
+                    잔해 속을 이동할 때 머리를 숙이거나 숙련되지 않은 동작으로 인한 부상을 예방하며, 손을 자유롭게 사용하여 대피나 구조 신호 보내기 등 다른 활동에 집중할 수 있도록 돕는다.">
+                    </div>
+                    <div class="grid-item">
+                        <img src="s_green/green8.png" 
+                            data-hover="s_green/green8_o.png" 
+                            alt="물품3"
+                            data-popup-img="s_green/green8_n.png" 
+                            data-title="상비약" 
+                            data-desc="상비약은 의사의 처방 없이도 구할 수 있는 일반 의약품으로, 재난 상황에서 흔히 발생하는 통증, 발열, 소화 불량, 알레르기 등 가벼운 증상을 스스로 치료하기 위해 준비하는 약품이다. 이는 생존 기간 동안 환자의 불편함을 해소하고, 증상 악화를 막아 의료 시스템 붕괴 상황에 대비한다.
+
+                    병원이나 약국 접근이 불가능해질 경우 상비약은 이러한 증상을 초기에 관리하여, 작은 질환이 심각한 상태로 발전하는 것을 막고 생존자의 활동 능력을 유지한다.">
+                    </div>
+                    <div class="grid-item">
+                        <img src="s_green/green3.png" 
+                            data-hover="s_green/green3_o.png" 
+                            alt="물품4"
+                            data-popup-img="s_green/green3_n.png" 
+                            data-title="손전등" 
+                            data-desc="지진이나 화재, 수해 등으로 인해 도시 전체의 전력 공급이 중단될 때, 손전등은 빛을 확보할 수 있는 유일한 수단이 된다. 시야 확보가 불가능한 어둠 속에서 대피 경로를 찾거나, 잔해 속에서 매몰된 구조물을 확인하고, 부상자를 확인하는 등 모든 재난 활동의 기본이 되므로 필수적이다.
+
+                    가장 기본적으로 주변을 비춰 이동 경로를 확보하는 데 활용한다. 또한, 멀리서 빛을 깜빡이는 구조 신호를 보내거나(모스 부호 등), 어두운 곳에서 위치 표시를 하는 데 사용한다.">
+                    </div>
+                    <div class="grid-item">
+                        <img src="s_green/green4.png" 
+                            data-hover="s_green/green4_o.png" 
+                            alt="물품5"
+                            data-popup-img="s_green/green4_n.png" 
+                            data-title="멀티툴" 
+                            data-desc="멀티툴은 하나의 주머니칼 크기 도구 안에 칼날, 톱, 드라이버, 캔 따개, 플라이어 등 여러 가지 기능을 통합한 다용도 도구이다. 컴팩트한 크기로 휴대성이 높으며, 재난 상황에서 다양한 문제 해결을 위한 만능 도구로 활용된다.
+
+                    가장 기본적인 칼날은 식재료를 자르거나 응급 처치 시 옷을 자르는 데 활용하며, 캔 따개는 비상식량인 통조림을 개봉한다. 플라이어(집게)는 잔해 속의 와이어나 작은 장애물을 제거하거나 끊는 데 유용하며, 드라이버는 간단한 장비 수리나 잠긴 문을 여는 시도에 활용한다.">
+                    </div>
+                    <div class="grid-item">
+                        <img src="s_yellow/yellow6.png" 
+                            data-hover="s_yellow/yellow6_o.png" 
+                            alt="물품6"
+                            data-popup-img="s_yellow/yellow6_n.png" 
+                            data-title="작업장갑" 
+                            data-desc="작업 장갑은 재난 환경에서 손을 보호하기 위해 제작된 튼튼한 장갑으로, 두꺼운 가죽, 내구성 높은 합성섬유, 또는 고무 코팅 등으로 제작된다.
+
+                    지진 후 잔해를 치우거나, 화재 현장에서 뜨거운 물건을 만지거나, 수해로 인해 날카로운 물체가 섞인 물속에서 활동해야 할 때 손이 가장 다치기 쉽다. 작업 장갑은 부상 없이 잔해 제거, 이동, 구조 활동 등을 수행할 수 있도록 손을 보호하는 데 필수적인 도구이다.">
+                    </div>
+                    <div class="grid-item">
+                        <img src="s_yellow/yellow7.png" 
+                            data-hover="s_yellow/yellow7_o.png" 
+                            alt="물품7"
+                            data-popup-img="s_yellow/yellow7_n.png" 
+                            data-title="작업화" 
+                            data-desc="지진 후 파편, 유리 조각, 날카로운 철근 등 위험 물질로 가득 찬 잔해 위를 걷게 될 때 발 부상을 막는 것이 매우 중요하다. 발을 다치면 이동 능력을 상실하여 생존 확률이 급격히 떨어지므로, 튼튼한 작업화는 발 부상을 방지하고 안정적인 이동 능력을 유지하는 데 필수적이다.
+
+                    주로 붕괴된 건물이나 파편이 널린 위험 지대를 안전하게 통과하는 데 활용된다. 발목을 지지하는 신발은 불안정한 지형에서 낙상이나 염좌를 예방하며, 두꺼운 밑창은 못이나 날카로운 물체가 발바닥을 뚫고 들어오는 것을 방지한다.">
+                    </div>
+                    <div class="grid-item">
+                        <img src="s_yellow/yellow8.png" 
+                            data-hover="s_yellow/yellow8_o.png" 
+                            alt="물품8"
+                            data-popup-img="s_yellow/yellow8_n.png" 
+                            data-title="호루라기" 
+                            data-desc="호루라기는 입으로 불어 크고 날카로운 소리를 내는 도구로, 적은 힘으로도 먼 거리까지 소리를 전달할 수 있어 비상 신호용으로 사용된다.
+
+                    지진 등으로 인해 잔해 속에 매몰되거나 고립되었을 때, 소리를 질러 구조를 요청하는 것은 체력 소모가 매우 크고 쉽게 목이 쉬어버린다. 호루라기는 체력 소모 없이 지속적이고 반복적인 구조 신호를 보낼 수 있게 해주고, 사람이 들을 수 있는 범위를 넘어 소리를 전달하여 구조대에게 자신의 위치를 알리는 데 필수적이다.">
+                    </div>
+                    <div class="grid-item">
+                        <img src="s_green/green10.png" 
+                            data-hover="s_green/green10_o.png" 
+                            alt="물품9"
+                            data-popup-img="s_green/green10_n.png" 
+                            data-title="비상식량" 
+                            data-desc="에너지바는 곡물, 견과류, 말린 과일 등을 압축하여 만든 고열량의 휴대용 식품이다.
+
+                    재난 발생 직후 72시간 동안 신체 활동량은 증가하는 반면, 식량 확보는 불가능할 수 있어 급격한 체력 저하가 발생한다. 에너지바는 최소한의 무게와 부피로 필수적인 열량을 신속하게 공급하여 체력 고갈을 막고, 대피 또는 구조 활동을 위한 활동 에너지를 유지하는 데 핵심적인 역할을 한다. 또한, 치거나 심리적으로 불안할 때 당분을 공급하여 기분을 전환하는 데도 활용된다.">
+                    </div>
+                    <div class="grid-item">
+                        <img src="s_yellow/yellow10.png" 
+                            data-hover="s_yellow/yellow10_o.png" 
+                            alt="물품10"
+                            data-popup-img="s_yellow/yellow10_n.png" 
+                            data-title="방진마스크" 
+                            data-desc="방진 마스크는 공기 중의 미세한 분진, 먼지, 입자성 물질이 호흡기로 흡입되는 것을 막기 위해 설계된 마스크이다.
+
+                    지진으로 인한 건물 붕괴나 폭발 발생 시, 공기 중에는 석면, 시멘트 가루, 미세 먼지 등 유해한 분진이 다량 발생한다. 방진 마스크는 이러한 분진이 폐로 들어가는 것을 막아 호흡기 질환이나 폐 손상을 예방하며, 특히 잔해 속에서 활동할 때 안전을 유지하는 데 필수적이다.">
+                    </div>
+                    
+                    <div class="overlay-wrapper">
+                        <div class="popup-card">
+                            <span class="popup-close-btn">&times;</span>
+                            <div class="popup-image-box">
+                                <img src="" alt="">
+                            </div>
+                            <div class="popup-text-box">
+                                <h3 class="popup-title"></h3>
+                                <p class="popup-desc"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            
+        </div>
+    </div>
+
+    <div id="modal-3" class="modal">
+        <div class="modal-content4">
+            <span class="close-btn">&times;</span>
+            <header class="main-title-area">
+                <img src="s_red/red_title.png" alt="화재대비 생존배낭" class="title-image">
+            </header>
+            
+            <section class="intro-text-area">
+                <p class="sub-text">
+                    화재로 인한 유독가스, 시야 방해, 고열 상황에서 신속하고 안전하게 건물 외부로<br>
+                    탈출하고 생존하기 위한 경량의 가방
+                </p>
+
+                <h2 class="content-title3">조건</h2>
+                <p class="sub-text">
+                    호흡기 보호 최우선 : 화재 시 사망 원인 1순위인 유독가스 및 연기에 대비<br>
+                    가볍고 신속한 휴대 : 화재는 발생 즉시 탈출해야 하므로 배낭 무게는 최소화<br>
+                     가장 쉽게 접근 가능한 위치에 보관
+
+                </p>
+
+                <h2 class="content-title3">알아야 할 지식</h2>
+                <p class="sub-text">
+                    탈출 계획 : 집/직장의 2개 이상의 비상 탈출 경로 및 최종 대피 장소 숙지<br>
+                    소화기 사용법 : 가장 가까운 소화기 위치와 정확한 사용법<br>
+                </p>
+            </section>
+            
+            <div style="margin-top: 50px; font-size: 2rem; color: #fff; animation: bounce 2s infinite;"> 
+                
+            </div>
+        </div>
+
+        <div class="modal-content2">
+            
+            <header class="main-title-area2">
+                <img src="s_red/red_title2.png" alt="생존배낭 구성품" class="title-image">
+            </header>
+
+            <section class="items-grid-area">
+                <div class="grid-container2">
+                    <div class="grid-item">
+                        <img src="s_green/green1.png" 
+                            data-hover="s_green/green1_o.png" 
+                            alt="물품1"
+                            data-popup-img="s_green/green1_n.png" 
+                            data-title="생수" 
+                            data-desc="물은 공기와 같이 인간 생존의 최우선 순위이다. 재난 시 탈수 상태를 피하고 생명을 유지하는 데 물이 가장 필수적인 요소이다.
+
+                    가장 중요한 활용은 탈수 방지를 위한 음용이다. 그 외에 상처를 씻어 감염을 막는 응급 처치 및 위생에 사용하여 재난 후 2차 감염을 예방하거나 화재상황에서 손수건을 적셔 건물을 탈출하는 데도 필수적으로 활용한다.">
+                    </div>
+                    <div class="grid-item">
+                        <img src="s_red/red2.png" 
+                            data-hover="s_red/red2_o.png" 
+                            alt="물품2"
+                            data-popup-img="s_red/red2_n.png" 
+                            data-title="방연마스크" 
+                            data-desc="방연 마스크는 화재 발생 시 발생하는 유독가스와 연기를 필터링하여 호흡기를 보호하고 질식을 방지하는 특수 마스크이다.
+
+                    화재 사망 원인의 대부분은 화염보다 연기 흡입으로 인한 유독가스 중독 및 질식이다. 방연 마스크는 화재 발생 시 유독가스를 차단하여, 호흡기를 보호하고 안전하게 건물을 벗어나 대피할 수 있는 생존 시간을 확보하는 데 절대적으로 필수적이다.">
+                    </div>
+                    <div class="grid-item">
+                        <img src="s_yellow/yellow8.png" 
+                            data-hover="s_yellow/yellow8_o.png" 
+                            alt="물품3"
+                            data-popup-img="s_yellow/yellow8_n.png" 
+                            data-title="호루라기" 
+                            data-desc="호루라기는 입으로 불어 크고 날카로운 소리를 내는 도구로, 적은 힘으로도 먼 거리까지 소리를 전달할 수 있어 비상 신호용으로 사용된다.
+
+                    지진 등으로 인해 잔해 속에 매몰되거나 고립되었을 때, 소리를 질러 구조를 요청하는 것은 체력 소모가 매우 크고 쉽게 목이 쉬어버린다. 호루라기는 체력 소모 없이 지속적이고 반복적인 구조 신호를 보낼 수 있게 해주고, 사람이 들을 수 있는 범위를 넘어 소리를 전달하여 구조대에게 자신의 위치를 알리는 데 필수적이다.">
+                    </div>
+                    <div class="grid-item">
+                        <img src="s_green/green3.png" 
+                            data-hover="s_green/green3_o.png" 
+                            alt="물품4"
+                            data-popup-img="s_green/green3_n.png" 
+                            data-title="손전등" 
+                            data-desc="지진이나 화재, 수해 등으로 인해 도시 전체의 전력 공급이 중단될 때, 손전등은 빛을 확보할 수 있는 유일한 수단이 된다. 시야 확보가 불가능한 어둠 속에서 대피 경로를 찾거나, 잔해 속에서 매몰된 구조물을 확인하고, 부상자를 확인하는 등 모든 재난 활동의 기본이 되므로 필수적이다.
+
+                    가장 기본적으로 주변을 비춰 이동 경로를 확보하는 데 활용한다. 또한, 멀리서 빛을 깜빡이는 구조 신호를 보내거나(모스 부호 등), 어두운 곳에서 위치 표시를 하는 데 사용한다.">
+                    </div>
+                    <div class="grid-item">
+                        <img src="s_green/green4.png" 
+                            data-hover="s_green/green4_o.png" 
+                            alt="물품5"
+                            data-popup-img="s_green/green4_n.png" 
+                            data-title="멀티툴" 
+                            data-desc="멀티툴은 하나의 주머니칼 크기 도구 안에 칼날, 톱, 드라이버, 캔 따개, 플라이어 등 여러 가지 기능을 통합한 다용도 도구이다. 컴팩트한 크기로 휴대성이 높으며, 재난 상황에서 다양한 문제 해결을 위한 만능 도구로 활용된다.
+
+                    가장 기본적인 칼날은 식재료를 자르거나 응급 처치 시 옷을 자르는 데 활용하며, 캔 따개는 비상식량인 통조림을 개봉한다. 플라이어(집게)는 잔해 속의 와이어나 작은 장애물을 제거하거나 끊는 데 유용하며, 드라이버는 간단한 장비 수리나 잠긴 문을 여는 시도에 활용한다.">
+                    </div>
+                    <div class="grid-item">
+                        <img src="s_red/red6.png" 
+                            data-hover="s_red/red6_o.png" 
+                            alt="물품6"
+                            data-popup-img="s_red/red6_n.png" 
+                            data-title="비상용로프" 
+                            data-desc="비상용 로프는 재난 시 고립된 장소에서 탈출하거나, 구조 활동, 물품 결속 등에 사용하는 고강도 끈이나 밧줄을 말한다. 휴대성을 위해 가볍고 부피가 작은 제품을 선택한다.
+
+                    화재나 지진으로 인한 붕괴 시 탈출구가 막히거나, 수해로 인해 급류나 침수 지역을 건너야 할 때 로프는 생명줄 역할을 한다. 고립된 장소에서 안전하게 하강하거나, 물에 빠졌을 때 안전선을 확보하고, 무거운 짐을 끌어올리는 등 탈출 및 구조 활동에 필수적인 도구이다.">
+                    </div>
+                    <div class="grid-item">
+                        <img src="s_red/red7.png" 
+                            data-hover="s_red/red7_o.png" 
+                            alt="물품7"
+                            data-popup-img="s_red/red7_n.png" 
+                            data-title="수건" 
+                            data-desc="수건은 물기를 흡수하거나 닦는 용도로 사용되는 천 조각이지만, 재난 대비용으로는 일반 수건보다 부피가 작고 물을 빠르게 흡수하며 건조가 빠른 스포츠 타월이 주로 권장된다. 다목적 활용이 가능하도록 여분 두 장 정도를 준비한다.
+
+                    물에 적신 수건을 사용하여 연기 속에서 호흡기를 보호하며, 이는 연기의 미세 입자와 유독가스의 일부를 물기로 걸러내는 역할을 한다. 또한, 뜨거워진 문고리나 장애물을 잡고 이동해야 할 때 수건을 감아 손을 보호하는 데 사용한다.">
+                    </div>
+                    <div class="grid-item">
+                        <img src="s_green/green8.png" 
+                            data-hover="s_green/green8_o.png" 
+                            alt="물품8"
+                            data-popup-img="s_green/green8_n.png" 
+                            data-title="상비약" 
+                            data-desc="상비약은 의사의 처방 없이도 구할 수 있는 일반 의약품으로, 재난 상황에서 흔히 발생하는 통증, 발열, 소화 불량, 알레르기 등 가벼운 증상을 스스로 치료하기 위해 준비하는 약품이다. 이는 생존 기간 동안 환자의 불편함을 해소하고, 증상 악화를 막아 의료 시스템 붕괴 상황에 대비한다.
+
+                    병원이나 약국 접근이 불가능해질 경우 상비약은 이러한 증상을 초기에 관리하여, 작은 질환이 심각한 상태로 발전하는 것을 막고 생존자의 활동 능력을 유지한다.">
+                    </div>
+
+                    <div class="overlay-wrapper">
+                        <div class="popup-card">
+                            <span class="popup-close-btn">&times;</span>
+                            <div class="popup-image-box">
+                                <img src="" alt="">
+                            </div>
+                            <div class="popup-text-box">
+                                <h3 class="popup-title"></h3>
+                                <p class="popup-desc"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <div id="modal-4" class="modal">
+        <div class="modal-content5">
+            <span class="close-btn">&times;</span>
+            <header class="main-title-area">
+                <img src="s_blue/blue_title.png" alt="수해대비 생존배낭" class="title-image">
+            </header>
+            
+            <section class="intro-text-area">
+                <p class="sub-text">
+                    집중 호우, 홍수, 해일 등으로 인한 침수와 고립 상황에서, 물의 위험(감염, 체온<br>
+                    저하)으로부터 생존하고 안전한 곳으로 이동하기 위한 가방
+                </p>
+
+                <h2 class="content-title4">조건</h2>
+                <p class="sub-text">
+                    방수 및 건조 기능 최우선 : 배낭 내용물 전체를 물과 습기로부터 보호<br>
+                    체온 유지 : 물에 젖은 환경에서 저체온증에 대비<br>
+                    식수 확보 : 오염된 물을 마시지 않도록 정수 장비 필수
+                </p>
+
+                <h2 class="content-title4">알아야 할 지식</h2>
+                <p class="sub-text">
+                    전기/가스 차단 : 침수가 예상될 경우 감전 및 누출 방지를 위해 차단하는 방법<br>
+                    홍수/급류 대처: 물이 무릎 이상 차면 안전한 구조물에 붙어 있는 요령 등<br>
+                    물 정화법: 휴대용 필터나 알약 사용법 
+                </p>
+            </section>
+            
+            <div style="margin-top: 50px; font-size: 2rem; color: #fff; animation: bounce 2s infinite;"> 
+                
+            </div>
+        </div>
+
+        <div class="modal-content2">
+            
+            <header class="main-title-area2">
+                <img src="s_blue/blue_title2.png" alt="생존배낭 구성품" class="title-image">
+            </header>
+
+            <section class="items-grid-area">
+                <div class="grid-container2">
+                    <div class="grid-item">
+                        <img src="s_blue/blue1.png" 
+                            data-hover="s_blue/blue1_o.png" 
+                            alt="물품1"
+                            data-popup-img="s_blue/blue1_n.png" 
+                            data-title="방수복" 
+                            data-desc="방수복은 비나 습기, 물 등으로부터 신체와 의복이 젖는 것을 막기 위해 설계된 의류이다. 재난 대비용으로는 가볍고 부피를 최소화할 수 있는 비닐 또는 고기능성 방수/방풍 소재의 우의나 판초 형태가 선호되며, 수해나 장기간 야외 활동 시 체온 유지에 필수적인 역할을 한다.
+
+                    가장 기본적인 활용은 비나 물로부터 몸과 배낭을 보호하는 것이다. 또한, 큰 판초형 방수복은 임시로 작은 쉼터를 만들거나 텐트를 보강하는 용도로 활용된다.">
+                    </div>
+                    <div class="grid-item">
+                        <img src="s_green/green6.png" 
+                            data-hover="s_green/green6_o.png" 
+                            alt="물품2"
+                            data-popup-img="s_green/green6_n.png" 
+                            data-title="소독약" 
+                            data-desc="소독약은 피부, 상처, 물체 표면 등에 존재하는 미생물이나 세균을 제거하거나 성장을 억제하여 감염을 예방하는 약품이다. 재난 상황에서는 오염된 환경으로 인한 상처 감염 위험이 높기 때문에, 즉각적인 처치가 가능한 포비돈 요오드액이나 소독용 알코올 솜 등의 형태로 준비한다.
+
+                    가장 기본적인 활용은 베이거나 긁힌 상처 부위를 소독하는 것이다. 또한, 마실 물이 부족할 때 정수용으로도 사용 가능하다.">
+                    </div>
+                    <div class="grid-item">
+                        <img src="s_green/green10.png" 
+                            data-hover="s_green/green10_o.png" 
+                            alt="물품3"
+                            data-popup-img="s_green/green10_n.png" 
+                            data-title="비상식량" 
+                            data-desc="에너지바는 곡물, 견과류, 말린 과일 등을 압축하여 만든 고열량의 휴대용 식품이다.
+
+                    재난 발생 직후 72시간 동안 신체 활동량은 증가하는 반면, 식량 확보는 불가능할 수 있어 급격한 체력 저하가 발생한다. 에너지바는 최소한의 무게와 부피로 필수적인 열량을 신속하게 공급하여 체력 고갈을 막고, 대피 또는 구조 활동을 위한 활동 에너지를 유지하는 데 핵심적인 역할을 한다. 또한, 치거나 심리적으로 불안할 때 당분을 공급하여 기분을 전환하는 데도 활용된다.">
+                    </div>
+                    <div class="grid-item">
+                        <img src="s_green/green5.png" 
+                            data-hover="s_green/green5_o.png" 
+                            alt="물품4"
+                            data-popup-img="s_green/green5_n.png" 
+                            data-title="소형라디오" 
+                            data-desc="지진이나 대규모 재난으로 인해 인터넷, 유선 전화, 휴대전화 기지국 등 모든 현대적 통신망이 마비될 때, 소형 라디오는 재난 정보를 수신하는 가장 확실한 통로가 된다. 정부나 재난방송 주관방송사의 공식적인 대피령, 구조 상황, 기상 상황 등의 필수 정보를 파악하는 데 결정적인 역할을 한다.
+
+                    가장 중요한 활용은 재난 상황과 대피 지침에 대한 정보를 실시간으로 청취하는 것이다. 또한, 비상 조명이나 휴대폰 충전용 보조 전원으로도 활용할 수 있다.">
+                    </div>
+                    <div class="grid-item">
+                        <img src="s_blue/blue5.png" 
+                            data-hover="s_blue/blue5_o.png" 
+                            alt="물품5"
+                            data-popup-img="s_blue/blue5_n.png" 
+                            data-title="방수배낭커버" 
+                            data-desc="방수 배낭 커버는 배낭 외부를 감싸 비, 눈, 습기로부터 배낭 내부의 내용물이 젖는 것을 막는 덮개이다. 사용하지 않을 때는 작게 접어 보관할 수 있을 만큼 가볍고 휴대가 간편한 것이 특징이다.
+
+                    가장 주된 활용은 이동 중 배낭을 씌워 방수 기능을 수행하게 하는 것이다. 또한, 비상 시 배낭에서 분리하여 임시 방수포나 바닥에 깔아 사용하는 습기 차단재로도 활용할 수 있다. 물에 젖은 옷가지 등을 임시로 담아 배낭 내부의 다른 물품과 습기를 분리하는 용도로도 활용된다.">
+                    </div>
+                    <div class="grid-item">
+                        <img src="s_red/red6.png" 
+                            data-hover="s_red/red6_o.png" 
+                            alt="물품6"
+                            data-popup-img="s_red/red6_n.png" 
+                            data-title="비상용로프" 
+                            data-desc="비상용 로프는 재난 시 고립된 장소에서 탈출하거나, 구조 활동, 물품 결속 등에 사용하는 고강도 끈이나 밧줄을 말한다. 휴대성을 위해 가볍고 부피가 작은 제품을 선택한다.
+
+                    화재나 지진으로 인한 붕괴 시 탈출구가 막히거나, 수해로 인해 급류나 침수 지역을 건너야 할 때 로프는 생명줄 역할을 한다. 고립된 장소에서 안전하게 하강하거나, 물에 빠졌을 때 안전선을 확보하고, 무거운 짐을 끌어올리는 등 탈출 및 구조 활동에 필수적인 도구이다.">
+                    </div>
+                    <div class="grid-item">
+                        <img src="s_green/green9.png" 
+                            data-hover="s_green/green9_o.png" 
+                            alt="물품7"
+                            data-popup-img="s_green/green9_n.png" 
+                            data-title="비상담요" 
+                            data-desc="비상 담요는 얇고 가벼운 폴리에스터 필름에 알루미늄이나 은 성분을 코팅하여 만든 담요이다. 부피가 매우 작고 무게가 거의 나가지 않아 휴대가 용이하며, 인체에서 발생하는 열의 약 90%를 반사하여 체온을 급격히 떨어지는 것을 막는 보온 기능을 주 목적으로 한다.
+
+                    가장 주된 활용은 신체 전체를 감싸 체온을 유지하는 것이다. 또한, 햇빛을 반사하는 특성을 이용하여 구조대에 자신의 위치를 알리는 신호 도구로 사용한다. 비상 시 임시로 방풍막이나 방수포처럼 활용하거나, 젖은 물품을 깔고 앉는 습기 차단재로도 활용하는 등 다목적 활용이 가능하다.">
+                    </div>
+                    <div class="grid-item">
+                        <img src="s_blue/blue8.png" 
+                            data-hover="s_blue/blue8_o.png" 
+                            alt="물품8"
+                            data-popup-img="s_blue/blue8_n.png" 
+                            data-title="정수알약" 
+                            data-desc="정수 알약은 주로 염소 또는 요오드 성분을 포함하고 있으며, 오염되었거나 출처를 알 수 없는 물에 넣어 수중의 박테리아, 바이러스 등 미생물을 살균하여 식수로 안전하게 마실 수 있도록 만드는 화학 약품이다.
+
+                    주된 활용은 하천수, 빗물 등 오염 가능성이 있는 물을 음용 가능한 상태로 만드는 것이다. 사용법에 따라 정해진 양의 물에 정해진 수의 알약을 넣고 정해진 시간(보통 30분 이상) 동안 기다린 후 마신다. 물품과 손을 소독할 때도 희석하여 위생 관리에 부분적으로 활용된다.">
+                    </div>
+
+                    <div class="overlay-wrapper">
+                        <div class="popup-card">
+                            <span class="popup-close-btn">&times;</span>
+                            <div class="popup-image-box">
+                                <img src="" alt="">
+                            </div>
+                            <div class="popup-text-box">
+                                <h3 class="popup-title"></h3>
+                                <p class="popup-desc"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <button id="topBtn" title="맨 위로">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 15L12 9L6 15" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </button>
+
+
+</body>
+</html>
